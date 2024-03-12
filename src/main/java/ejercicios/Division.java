@@ -9,15 +9,20 @@ import java.util.Scanner;
  * @author danielsanchez
  */
 public class Division {
-    public static String evaluar(int dividendo, int divisor) {
+    public static String evaluar(int d, int divi) {
         // TODO: Coloca aquí el código del ejercicio 3: Division
-        int cociente = 0;
-        int residuo = 0;
-        String respuesta = "La división es exacta. \n"
-                + "Cociente: " + cociente + "\n"
-                + "Residuo: " + residuo;
-        return respuesta;
+        String res= "";
+        int c =d/divi ;
+        int r = d%divi;    
+        if (r == 0){res = "La división es exacta. \n"
+                + "Cociente: " + c + "\n"
+                + "Residuo: " + r;}
+        else if (r != 0){res = "La división no exacta. \n"
+                + "Cociente: " + c + "\n"
+                + "Residuo: " + r;}
+        return res;
     }
+
     
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);

@@ -3,13 +3,21 @@ package ejercicios;
 import static ejercicios.SetDeTenis.evaluar;
 import java.util.Scanner;
 
-/**
- *
- * @author danielsanchez
- */
+
 public class Triangulo {
     public static String evaluar(double a, double b, double c) {
-        // TODO: Coloca aquí el código del ejercicio 7: Triángulos
+        if (a>(b+c) || b>(a+c) || c>(b+a)){
+            System.out.println("No es un triángulo válido");
+        }
+        else if (a==b && b==c){
+            System.out.println("El triángulo es equilátero");
+        }
+        else if ((a==b && (b!=c || a!=c)) || (b==c && (c!=a || b!=a)) || (a==c && (c!=b || a!=b))){
+            System.out.println("El triángulo es isósceles");
+        }
+        else if (a!=b && b!=c && a!=c){
+            System.out.println("El triángulo es escaleno");
+        }
         return "";
     }
     
